@@ -44,7 +44,7 @@ def getUserRoll(_index):
 
 
 start = banner()
-print(start)
+
 
 if not start:
     print("Program exiting... ")
