@@ -35,7 +35,7 @@ def verifyRange(_roll):
 
 def getUserRoll(_index):
     while True:
-        _roll = input(f"What is value (1-6) of your dice roll? [roll #: {_index}/100]: ").strip()
+        _roll = input(f"What is value (1-6) of your dice roll? [roll #: {_index + 1}/100]: ").strip()
         if verifyRange(_roll):
             break
         else:
