@@ -7,17 +7,28 @@ from monero.seed import Seed
 # import random
 import hashlib
 
+TERMWIDTH = 80
+LINEBREAK = '-' * TERMWIDTH
+LINEBREAK2 = '_' * TERMWIDTH
 VERSION = 0.1
 dice_rolls = ""
 index = 0
 #flip debug for testing. This hardcodes the seed as "1" for every roll. Only for testing
 DEBUG = False
 
+
+def breakLine():
+    print(f"{LINEBREAK2}")
+
 def banner():
+    print()
     print(f"Welcome to MoneroDice-WalletGen version:{VERSION}")
+    print(f"{LINEBREAK}")
     print(f"The script requires you to roll a 6 sided dice 100 times.")
     print(f"Don't worry the following prompt will walk you through each step")
+    print(f"{LINEBREAK}")
     _start = input("Are you ready to begin? Y/N: ")
+    print(f"{LINEBREAK}")
     if _start.lower() == "y":
         return True
     else:
@@ -73,6 +84,17 @@ hex = entropy_bytes
 hex = hex.hex()
 s = Seed(hex)
 phrase = s.phrase
+public_address = s.public_address()
 
+
+breakLine()
 print(f"The seed Phrase:")
 print(f"{phrase}")
+
+breakLine()
+print(f"The PUBLIC ADDRESS:")
+print(f"{public_address}")
+
+
+breakLine()
+print()
