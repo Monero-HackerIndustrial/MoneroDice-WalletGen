@@ -1,7 +1,13 @@
 # MoneroDice-WalletGen
 A Monero Diceware seed generator. Generate Monero wallet seeds by rolling dice. Can be used offline.
 
-![generateSeed](https://user-images.githubusercontent.com/106575456/172096931-e956684a-d6e2-4a00-a282-69be9b7c4cd6.png)
+
+## New UI
+![moneroDice2-1](https://user-images.githubusercontent.com/106575456/173973660-40559fa4-4e73-4937-90d1-c8c1c2bfc486.png)
+### Now outputs public base address:
+![moneroDice2](https://user-images.githubusercontent.com/106575456/173973687-8b94642e-f2bb-4d52-b921-87a86385dc83.png)
+
+
 
 
 ## Requirements
