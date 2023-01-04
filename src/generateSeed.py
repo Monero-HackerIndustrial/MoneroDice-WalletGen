@@ -76,8 +76,23 @@ print(f"Finished generating your entropy.")
 
 input("Ready to print your Monero seed. Please press any key to continue: ")
 
+#this is the old way of generating the keys:
 #Generated 32 bytes of entropy
-entropy_bytes = hashlib.sha256(dice_rolls.encode()).digest()
+#entropy_bytes = hashlib.sha256(dice_rolls.encode()).digest()
+
+#the new way uses the key derivation of
+# https://github.com/diybitcoinhardware/embit/blob/2bf81739eb5f01f8ad59d23c492fd9d9564eed48/src/embit/bip39.py#L86
+PBKDF2_ROUNDS = 2048
+#password used for the salt (a sha256sum )
+password = hashlib.sha256(dice_rolls.encode()).digest()
+entropy_bytes  = hashlib.pbkdf2_hmac(
+        "sha512",
+        dice_rolls.encode("utf-8"),
+        password,
+        PBKDF2_ROUNDS,
+        64,
+    )
+
 
 hex = entropy_bytes
 
