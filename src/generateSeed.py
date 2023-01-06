@@ -23,6 +23,14 @@ def breakLine():
 def banner():
     print()
     print(f"Welcome to MoneroDice-WalletGen version:{VERSION}")
+    print(f"WARNING THIS IS NOT PRODUCTION READY. PLEASE DON'T USE FOR REAL FUNDS")
+    print(f"YOU COULD LOSE ACCESS TO YOUR FUNDS")
+    print(f"{LINEBREAK}")
+    _start = input(f"Do you understand the risk? Y/N: ")
+    if _start.lower() == "y":
+        return True
+    else:
+        return False
     print(f"{LINEBREAK}")
     print(f"The script requires you to roll a 6 sided dice 100 times.")
     print(f"Don't worry the following prompt will walk you through each step")

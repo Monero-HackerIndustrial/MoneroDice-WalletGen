@@ -1,6 +1,11 @@
 # MoneroDice-WalletGen
 A Monero Diceware seed generator. Generate Monero wallet seeds by rolling dice. Can be used offline.
 
+## WARNING THIS SOFTWARE IS EXPERIMENTAL AND NOT READY FOR PRODUCTION.
+## DO NOT USE REAL FUNDS WITH IT. YOU COULD LOSE YOUR FUNDS.
+
+
+
 
 ## New UI
 ![moneroDice2-1](https://user-images.githubusercontent.com/106575456/173973660-40559fa4-4e73-4937-90d1-c8c1c2bfc486.png)
@@ -28,11 +33,11 @@ run:
 python3 generateSeed.py
 `
 
-The script will ask you to roll a dice an input the roll. For proper entropy the script takes 100 rolls. After rolling 100 rolls the output will be a 25 word Monero seed. This seed can be used with official Monero GUI or wallet. 
+The script will ask you to roll a dice an input the roll. For proper entropy the script takes 100 rolls. After rolling 100 rolls the output will be a 25 word Monero seed. This seed can be used with official Monero GUI or wallet.
 
 
-## Entropy 
-The script generates 100 dice rolls for a little bit over 256 bit entropy. 
+## Entropy
+The script generates 100 dice rolls for a little bit over 256 bit entropy.
 
 Based on some Math from coldcard, a d6 dice provides 2.585 bits of additional entropy per roll
 This means:
