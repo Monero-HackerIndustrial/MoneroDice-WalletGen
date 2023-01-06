@@ -64,7 +64,7 @@ if not start:
 print("Let's generate entropy with dice!")
 
 
-while index < 100:
+while index < 99:
     if DEBUG:
         roll = "1"
     else:
