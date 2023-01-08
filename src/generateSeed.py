@@ -98,7 +98,7 @@ entropy_bytes  = hashlib.pbkdf2_hmac(
         dice_rolls.encode("utf-8"),
         password,
         PBKDF2_ROUNDS,
-        64,
+        32,
     )
 
 
